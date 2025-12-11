@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React, { ReactNode } from 'react'
 import SideBar from './SideBar'
 import TopBar from './TopBar'
+import { useSession } from 'next-auth/react'
 // import AppSnackBar from './AppSnackBar'
 
 interface Props {
@@ -22,11 +23,14 @@ const Layout = ({ children }: Props) => {
     // useEffect(()=>{ 
     //     const accessToken = localStorage.getItem("accessToken");
     // },[])
+
+    const {data} = useSession();
+    
   return (
-    <Box>
+    <Box sx={{height: "100vh" }}>
       <TopBar />
-      <Box sx={{ display: "flex", height: "93vh" }}>
-        <SideBar />
+      <Box sx={{ display: "flex", height: "92%" }}>
+        {data && <SideBar />}
         <Box sx={{ flexGrow: 1, p: 2, bgcolor: "#F9F7F7" }}>
           {children}
         </Box>

@@ -1,7 +1,7 @@
 import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import React from 'react'
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+// import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+// import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import CategoryIcon from '@mui/icons-material/Category';
